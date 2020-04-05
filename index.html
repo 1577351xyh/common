@@ -9,23 +9,67 @@
   </head>
   <body>
     <script>
-      // var arrs = [1, 2, 3, 4, 5, 23, 4, 2, 3, 4]
+      // 正则
+      let str = 'ssdA2sadas sd a'
 
-      // let arr = [1, 2, 3]
-      //   .map((item, index) => {
-      //     return item + 5
-      //   })
-      //   [(1, 2, 3, 4, 5)].filter((item, index) => {
-      //     item > 2
-      //   })
-      // console.log(new Date())
-      // console.log(quickSort(arrs))
-      // console.log(new Date())
+      // 转义
+      //  \d 代表数字 /\d/
 
-      let defult = { a: 1, d: 2, arr: [1] }
-      let src = { c: 11, f: 32, arr: [1, 4], v: { d: 'a' } }
-      merge(defult, src)
-      console.log(defult)
+      // 选项
+      //  i 忽略大小写
+      //  g 全局匹配所有的
+      //  m 多行模式 默认是工作在单行模式下
+      // /a/ig 匹配全部的a,忽略大小写
+
+      //function
+      //search 找位置
+      //match  匹配 返回数组结果
+      //replace 替换
+      //test 返回一个布尔
+
+      // 量词
+      //{3} {n} {n,m} 最少n最多m 
+      // + {1,} 最少有一个
+      // * {0,}
+      // ? 可有可无 
+
+      //元字符 [] () {}
+      //1.或 
+      // /a[abc]s/ aas abs acs
+      //2.范围
+      // [a-z] [0-9]
+      //3.排除
+      // ^ [^abc] 排除abc
+
+      //修饰符
+      // ^ 行首 放在外面
+      // $ 行尾
+      // str.search(re)返回字符串的索引
+      // 全局匹配数字 let re = /\d+/g
+
+
+      // 匹配一个http
+      re =/^https?:\/\//
+      let re = /\d/
+      alert(str.search(re))
+
+      //案例
+      // 匹配手机号
+      // 1.11位数字
+      // 2.开头
+      // 13x 15 0~8 17 0~4开头,购买匹配八位,开头结尾
+      // /$(13\d|15[08]|17[0-4])\d{8}$/
+      // 邮箱
+      // 用户名: 数字/字母/下划线/最多64位
+      // \w=[a-z0-9_]
+      // \w{1,64}
+      // 2.网址:英文/数字/中划线
+      // [a-z0-9\-]{1,256}
+      // 3.后缀:(.英文2~6位)1~2个
+      // (\.[a-z]{2,6}){1,2}
+      //用户名
+
+
     </script>
   </body>
 </html>
