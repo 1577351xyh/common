@@ -44,7 +44,7 @@ module.exports = {
   },
   obj: {
     //去重
-    uniQue: (arr) => {
+    uniQue: (arr) => {b
       var newArr = []
       for (var i = 0; i < arr.length; i++) {
         if (newArr.indexOf(arr[i]) == -1) {
